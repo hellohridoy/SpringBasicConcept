@@ -1,6 +1,7 @@
 package com.example.system.springbasicconcept.utils;
 
 import com.example.system.springbasicconcept.emums.BaseEnum;
+import com.example.system.springbasicconcept.exceptions.InvalidEnumValueException;
 
 public class EnumUtil {
 
@@ -11,7 +12,7 @@ public class EnumUtil {
                 return enumConstant;
             }
         }
-        throw new RuntimeException("Invalid ID " + id + " for enum " + enumClass.getSimpleName());
+        throw new InvalidEnumValueException("Invalid ID " + id + " for enum " + enumClass.getSimpleName());
     }
 
     // ✅ Find enum by label
@@ -21,6 +22,6 @@ public class EnumUtil {
                 return enumConstant;
             }
         }
-        throw new RuntimeException("Invalid Label '" + label + "' for enum " + enumClass.getSimpleName());
+        throw new InvalidEnumValueException("Invalid Label '" + label + "' for enum " + enumClass.getSimpleName());
     }
 }

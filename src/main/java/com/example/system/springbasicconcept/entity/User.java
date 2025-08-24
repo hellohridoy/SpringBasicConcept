@@ -1,6 +1,7 @@
 package com.example.system.springbasicconcept.entity;
 
 import com.example.system.springbasicconcept.emums.Gender;
+import com.example.system.springbasicconcept.emums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,4 +23,7 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 }

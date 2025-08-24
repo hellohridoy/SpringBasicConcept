@@ -6,7 +6,8 @@ import lombok.NonNull;
 @Data
 public class CreateUserDTO {
     private String name;
-//    private int genderId;
-    @NonNull
+    private int genderId;
     private String genderLabel;
+    private int statusId;
+    private String statusLabel;
 }

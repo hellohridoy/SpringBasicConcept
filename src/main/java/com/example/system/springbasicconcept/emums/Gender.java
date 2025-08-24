@@ -1,6 +1,7 @@
 package com.example.system.springbasicconcept.emums;
 
 
+import com.example.system.springbasicconcept.exceptions.InvalidEnumValueException;
 import lombok.Getter;
 
 @Getter
@@ -24,7 +25,7 @@ public enum Gender implements BaseEnum{
                 return gender;
             }
         }
-        throw new IllegalArgumentException("Gender with id " + id + " not found");
+        throw new InvalidEnumValueException("Gender with id " + id + " not found");
     }
 
     public static Gender fromLabel(String label) {
@@ -33,7 +34,7 @@ public enum Gender implements BaseEnum{
                 return gender;
             }
         }
-        throw new IllegalArgumentException("Gender with label " + label + " not found");
+        throw new InvalidEnumValueException("Gender with label " + label + " not found");
     }
 
     @Override
