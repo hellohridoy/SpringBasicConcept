@@ -9,7 +9,6 @@ public interface DepartmentService {
 
     Department saveDepartment(Department department);
 
-
     List<Department> fatehAllDepartments();
 
     Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
